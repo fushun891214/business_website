@@ -601,157 +601,170 @@
 
   <main id="main" class="main">    
     <div class="pagetitle">
-      <h1>我的商品</h1>
+      <h1>賣家主頁</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="seller_dash_index.html">賣家主頁</a></li>
-          <li class="breadcrumb-item">商品管理</li>
-          <li class="breadcrumb-item active">我的商品</li>
+          <!-- <li class="breadcrumb-item"><a href="seller_dash_index.html">賣家主頁</a></li> -->
+          <!-- <li class="breadcrumb-item">大功能項</li>
+          <li class="breadcrumb-item active">小功能項</li> -->
         </ol>
       </nav>
     </div>
     <!-- End Page Title -->
-    <section class="section">
-      <div class="row align-items-top">
-        <!-- 第一直排 -->
-        <div class="col-lg-3">
-          <div class="card">
-            <img src="assets/img/product 1.png" class="card-img-top" alt="...">
-            <div class="card-body">
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg">
+          <div class="row">
+
+            <!-- Sales Card -->
+            <!-- <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filter</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Today</a></li>
+                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Sales <span>| Today</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-cart"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>145</h6>
+                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div> -->
+            <!-- End Sales Card -->
+
+            <!-- Revenue Card -->
+            <div class="col-xxl-4 col-md-6">
               
-              <h5 class="card-title">藍芽耳機</h5>
-              <p class="card-text">音質優良的藍芽耳機，電池續航力高，出門必備選擇。防潑水表面，下雨天也不用怕。</p>
 
-              <a href="#" class="card-link">編輯商品資訊</a>
-              <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
-            </div>
-          </div>
-          <!-- Card with an image on top -->
-      
-          <div class="card">
-            <img src="assets/img/product 3.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">全白筆記本</h5>
-              <p class="card-text">白到發光，因為我懶得做筆記，所以就覺得還是賣掉好了，開封未使用。</p>
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filter</h6>
+                    </li>
 
-              <a href="#" class="card-link">編輯商品資訊</a>
-              <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
-            </div>
+                    <li><a class="dropdown-item" href="#">Today</a></li>
+                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                  </ul>
+                </div>
+
+                
+
+
+            </div><!-- End Revenue Card -->
+
+            <!-- Top Selling -->
+            <div class="col-12">
+              <div class="card top-selling overflow-auto">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Filter</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Today</a></li>
+                    <li><a class="dropdown-item" href="#">This Month</a></li>
+                    <li><a class="dropdown-item" href="#">This Year</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body pb-0">
+                  <h5 class="card-title">我的訂單 </h5>
+
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">商品圖樣</th>
+                        <th scope="col">商品名稱</th>
+                        <th scope="col">定價</th>
+                        <th scope="col">銷售數量</th>
+                        <th scope="col">總計</th>
+                        <th scope="col">付款狀況</th>
+                        <th scope="col">出貨狀況</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
+                        <td>$64</td>
+                        <td class="fw-bold">124</td>
+                        <td>$5,828</td>
+                        <th scope="row"><a href="#"><img src="assets/img/Paid.svg" alt="" class="d-flex justify-content-center"></a></th>
+                        <th scope="row"><a href="#"><img src="assets/img/Shipped.svg" alt="" class="d-flex justify-content-center"></a></th>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt="" ></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
+                        <td>$46</td>
+                        <td class="fw-bold">98</td>
+                        <td>$4,508</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
+                        <td>$59</td>
+                        <td class="fw-bold">74</td>
+                        <td>$4,366</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
+                        <td>$32</td>
+                        <td class="fw-bold">63</td>
+                        <td>$2,016</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
+                        <td>$79</td>
+                        <td class="fw-bold">41</td>
+                        <td>$3,239</td>
+                      </tr>
+
+                      
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- End Top Selling -->
+
+            
+
           </div>
-          <!-- End Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product 2.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">筆記型電腦</h5>
-              <p class="card-text">細心保養的二手筆記型電腦，電池續航力高，出門工作必備選擇。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-danger rounded-pill float-end">審核未通過</button>
-            </div>
-          </div>
-          <!-- End Card with an image on top -->
-        </div>
-        <!-- 第二直排 -->
-        <div class="col-lg-3">
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">球鞋</h5>
-              <p class="card-text">網購買回來發現不太合腳，已過鑑賞期已過，故售出。以城中面交為佳，可接受郵局寄送。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-3.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-success rounded-pill float-end">審核未通過</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-        </div>
-        <div class="col-lg-3">
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-4.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-5.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-6.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-        </div>
-        <div class="col-lg-3">
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-7.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-8.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-          <!-- Card with an image on top -->
-          <div class="card">
-            <img src="assets/img/product-9.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">商品名稱</h5>
-              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
-              <a href="#" class="card-link">編輯商品資訊</a>
-                  <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
-            </div>
-          </div><!-- End Card with an image on top -->
-        </div>
+        </div><!-- End Left side columns -->
+
+        </div><!-- End Right side columns -->
+
       </div>
     </section>
-    
-    
-
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

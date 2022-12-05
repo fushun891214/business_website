@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>東吳拍賣站賣家中心</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/brand.png" rel="icon">
+  <link href="assets/img/brand.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -28,14 +28,6 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/dash_style.css" rel="stylesheet">
-
-  <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
- <!-- Include the above in your HEAD tag  -->
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.4.1
@@ -226,10 +218,9 @@
 
       <!-- header text -->
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="seller_dash_index.html" class="nav-link px-3 link-dark">賣家首頁</a></li>
-        <li><a href="#" class="nav-link px-3 link-dark">我的賣場</a></li>
-        <li><a href="user_index.html" class="nav-link px-3 link-dark">回到商場</a></li>
-        <li><a href="#" class="nav-link px-3 link-dark">關於</a></li>
+        <li><a href="seller_dash_index.html" class="nav-link px-3 link-dark">首頁</a></li>
+        <li><a href="#" class="nav-link px-3 link-dark">買家主頁</a></li>
+        <li><a href="user_index.html" class="nav-link px-3 link-dark">購物車</a></li>
       </ul>
       <!-- End header text -->
 
@@ -237,13 +228,13 @@
 
         <a class="nav-link nav-profile d-flex align-items-center pe-3" href="#" data-bs-toggle="dropdown">
           <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-          <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+          <span class="d-none d-md-block dropdown-toggle ps-2">蔡佳順</span>
         </a><!-- End Profile Iamge Icon -->
 
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
           <li class="dropdown-header">
-            <h6>Kevin Anderson</h6>
-            <span>Web Designer</span>
+            <h6>蔡佳順</h6>
+            <span>賣家</span>
           </li>
           <li>
             <hr class="dropdown-divider">
@@ -252,7 +243,7 @@
           <li>
             <a class="dropdown-item d-flex align-items-center" href="seller_profile.html">
               <i class="bi bi-person"></i>
-              <span>My Profile</span>
+              <span>我的資訊</span>
             </a>
           </li>
           <li>
@@ -262,7 +253,7 @@
           <li>
             <a class="dropdown-item d-flex align-items-center" href="seller_profile.html">
               <i class="bi bi-gear"></i>
-              <span>Account Settings</span>
+              <span>付款設定</span>
             </a>
           </li>
           <li>
@@ -272,7 +263,7 @@
           <li>
             <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
               <i class="bi bi-question-circle"></i>
-              <span>Need Help?</span>
+              <span>幫助</span>
             </a>
           </li>
           <li>
@@ -282,7 +273,7 @@
           <li>
             <a class="dropdown-item d-flex align-items-center" href="#">
               <i class="bi bi-box-arrow-right"></i>
-              <span>Sign Out</span>
+              <span>登出</span>
             </a>
           </li>
 
@@ -341,7 +332,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="seller_dash_index.html">
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span>賣家主頁</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
@@ -352,40 +343,42 @@
         </a>
         <ul id="products-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
+            <a href="seller_my_product.html">
+              <i class="bi bi-circle"></i><span>我的商品</span>
+            </a>
+          </li>
+          
+          <li>
             <a href="seller_add_product .html">
               <i class="bi bi-circle"></i><span>新增商品</span>
             </a>
           </li>
           <li>
-            <a href="seller_sale_products_list.html">
-              <i class="bi bi-circle"></i><span>刪除商品</span>
+            <a href="seller_sale_products_delete.html">
+              <i class="bi bi-circle"></i><span>下架商品</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-circle"></i><span>商品列表</span>
-            </a>
-          </li>
+          
         </ul>
       </li>
       <!-- End Components Nav -->
       
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-menu-button-wide"></i><span>財務管理</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span>Alerts</span>
+            <a href="seller_my_wallet.html">
+              <i class="bi bi-circle"></i><span>我的錢包</span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>Accordion</span>
+            <a href="seller_payment_setting.html">
+              <i class="bi bi-circle"></i><span>付款設定</span>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="components-badges.html">
               <i class="bi bi-circle"></i><span>Badges</span>
             </a>
@@ -444,30 +437,30 @@
             <a href="components-tooltips.html">
               <i class="bi bi-circle"></i><span>Tooltips</span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </li><!-- End Components Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>商品</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-journal-text"></i><span>訂單管理</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <!-- <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Form Elements</span>
-            </a> -->
+            <a href="seller_my_order.html">
+              <i class="bi bi-circle"></i><span>我的訂單</span>
+            </a>
           </li>
           <li>
-            <!-- <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a> -->
+            <a href="seller_order_return.html">
+              <i class="bi bi-circle"></i><span>退貨退款</span>
+            </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="forms-editors.html">
               <i class="bi bi-circle"></i><span>新增商品</span>
             </a>
-          </li>
+          </li> -->
           <li>
             <!-- <a href="forms-validation.html">
               <i class="bi bi-circle"></i><span>Form Validation</span>
@@ -478,17 +471,17 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>訂單狀態</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-layout-text-window-reverse"></i><span>會員中心</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>我的訂單</span>
+            <a href="seller_profile.html">
+              <i class="bi bi-circle"></i><span>賣家資訊</span>
             </a>
           </li>
           <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>退貨/退款</span>
+            <a href="seller_help.html">
+              <i class="bi bi-circle"></i><span>幫助</span>
             </a>
           </li>
         </ul>
@@ -496,25 +489,25 @@
       <!-- End Tables Nav -->
 
       <li class="nav-item">
-        <!-- <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bar-chart"></i><span>報表分析</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a> -->
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-bar-chart"></i><span>物流中心</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="charts-chartjs.html">
-              <i class="bi bi-circle"></i><span>Chart.js</span>
+            <a href="seller_logistics_setting.html">
+              <i class="bi bi-circle"></i><span>物流設定</span>
             </a>
           </li>
           <li>
-            <a href="charts-apexcharts.html">
-              <i class="bi bi-circle"></i><span>ApexCharts</span>
+            <a href="seller_logistics_condition.html">
+              <i class="bi bi-circle"></i><span>出貨狀態</span>
             </a>
           </li>
-          <li>
+          <!-- <li>
             <a href="charts-echarts.html">
               <i class="bi bi-circle"></i><span>ECharts</span>
             </a>
-          </li>
+          </li> -->
         </ul>
       </li>
       <!-- End Charts Nav -->
@@ -543,14 +536,14 @@
       </li>
       <!-- End Icons Nav -->
 
-      <li class="nav-heading">會員中心</li>
+      <!-- <li class="nav-heading">會員中心</li> -->
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link " href="seller_profile.html">
           <i class="bi bi-person"></i>
           <span>個人資料</span>
         </a>
-      </li>
+      </li> -->
       <!-- End Profile Page Nav -->
 
       <!-- <li class="nav-item">
@@ -569,20 +562,20 @@
       </li> -->
       <!-- End Contact Page Nav -->
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="user_sign-up.html">
           <i class="bi bi-card-list"></i>
           <span>註冊新帳號</span>
         </a>
-      </li>
+      </li> -->
       <!-- End Register Page Nav -->
 
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">
           <i class="bi bi-box-arrow-in-right"></i>
           <span>登出</span>
         </a>
-      </li>
+      </li> -->
       <!-- End Login Page Nav -->
 
       <!-- <li class="nav-item">
@@ -606,179 +599,161 @@
   </aside>
   <!-- End Sidebar-->
 
-  <main id="main" class="main">  
-
-      
-
-    <div class="container">
-
-      <section class="section"> 
-
-        <nav class="navbar"></nav>
-        <nav class="navbar"></nav>
-        
-      <div class="row">
-        
-            <div class="col-md-12">
-            <h4>Bootstrap Snipp for Datatable</h4>
-            <div class="table-responsive">
-    
-                    
-                  <table id="mytable" class="table table-bordred table-striped">
-                      
-                      <thead>
-                      
-                      <th><input type="checkbox" id="checkall" /></th>
-                      <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Address</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                          <th>Edit</th>
-                          
-                          <th>Delete</th>
-                      </thead>
-        <tbody>
-        
-        <tr>
-        <td><input type="checkbox" class="checkthis" /></td>
-        <td>Mohsin</td>
-        <td>Irshad</td>
-        <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-        <td>isometric.mohsin@gmail.com</td>
-        <td>+923335586757</td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon"><i class="bi bi-pencil"></i></span></button></p></td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
-        </tr>
-        
-    <tr>
-        <td><input type="checkbox" class="checkthis" /></td>
-        <td>Mohsin</td>
-        <td>Irshad</td>
-        <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-        <td>isometric.mohsin@gmail.com</td>
-        <td>+923335586757</td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon"><i class="bi bi-pencil"></i></span></button></p></td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
-        </tr>
-        
-        
-    <tr>
-        <td><input type="checkbox" class="checkthis" /></td>
-        <td>Mohsin</td>
-        <td>Irshad</td>
-        <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-        <td>isometric.mohsin@gmail.com</td>
-        <td>+923335586757</td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon"><i class="bi bi-pencil"></i></span></button></p></td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
-        </tr>
-        
-        
-        
-    <tr>
-        <td><input type="checkbox" class="checkthis" /></td>
-        <td>Mohsin</td>
-        <td>Irshad</td>
-        <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-        <td>isometric.mohsin@gmail.com</td>
-        <td>+923335586757</td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon"><i class="bi bi-pencil"></i></span></button></p></td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
-        
-        
-    <tr>
-        <td><input type="checkbox" class="checkthis" /></td>
-        <td>Mohsin</td>
-        <td>Irshad</td>
-        <td>CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan</td>
-        <td>isometric.mohsin@gmail.com</td>
-        <td>+923335586757</td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon"><i class="bi bi-pencil"></i></span></button></p></td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
-        </tr>
-        
-        </tbody>
-            
-    </table>
-    
-    <div class="clearfix"></div>
-    <ul class="pagination pull-right">
-      <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
-    </ul>
-                    
-                </div>
-                
-            </div>
-      </div>
+  <main id="main" class="main">    
+    <div class="pagetitle">
+      <h1>我的商品</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="seller_dash_index.html">賣家主頁</a></li>
+          <li class="breadcrumb-item">商品管理</li>
+          <li class="breadcrumb-item active">我的商品</li>
+        </ol>
+      </nav>
     </div>
+    <!-- End Page Title -->
+    <section class="section">
+      <div class="row align-items-top">
+        <!-- 第一直排 -->
+        <div class="col-lg-3">
+          <div class="card">
+            <img src="assets/img/product 1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              
+              <h5 class="card-title">藍芽耳機</h5>
+              <p class="card-text">音質優良的藍芽耳機，電池續航力高，出門必備選擇。防潑水表面，下雨天也不用怕。</p>
+
+              <a href="#" class="card-link">編輯商品資訊</a>
+              <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
+            </div>
+          </div>
+          <!-- Card with an image on top -->
+      
+          <div class="card">
+            <img src="assets/img/product 3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">全白筆記本</h5>
+              <p class="card-text">白到發光，因為我懶得做筆記，所以就覺得還是賣掉好了，開封未使用。</p>
+
+              <a href="#" class="card-link">編輯商品資訊</a>
+              <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
+            </div>
+          </div>
+          <!-- End Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product 2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">筆記型電腦</h5>
+              <p class="card-text">細心保養的二手筆記型電腦，電池續航力高，出門工作必備選擇。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-danger rounded-pill float-end">審核未通過</button>
+            </div>
+          </div>
+          <!-- End Card with an image on top -->
+        </div>
+        <!-- 第二直排 -->
+        <div class="col-lg-3">
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">球鞋</h5>
+              <p class="card-text">網購買回來發現不太合腳，已過鑑賞期已過，故售出。以城中面交為佳，可接受郵局寄送。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-success rounded-pill float-end">審核未通過</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-4.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-5.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-6.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-success rounded-pill float-end">審核未通過</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+        <div class="col-lg-3">
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-7.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-8.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+          <!-- Card with an image on top -->
+          <div class="card">
+            <img src="assets/img/product-9.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">商品名稱</h5>
+              <p class="card-text">我懶得寫了，總之這邊是商品的資訊，盡量寫兩行就好，不對稱很醜。</p>
+              <a href="#" class="card-link">編輯商品資訊</a>
+                  <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
+            </div>
+          </div><!-- End Card with an image on top -->
+        </div>
+      </div>
+    </section>
     
     
-    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-          <div class="modal-dialog">
-        <div class="modal-content">
-              <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title custom_align" id="Heading">Edit Your Detail</h4>
-          </div>
-              <div class="modal-body">
-              <div class="form-group">
-            <input class="form-control " type="text" placeholder="Mohsin">
-            </div>
-            <div class="form-group">
-            
-            <input class="form-control " type="text" placeholder="Irshad">
-            </div>
-            <div class="form-group">
-            <textarea rows="2" class="form-control" placeholder="CB 106/107 Street # 11 Wah Cantt Islamabad Pakistan"></textarea>
-        
-            
-            </div>
-          </div>
-              <div class="modal-footer ">
-            <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
-          </div>
-            </div>
-        <!-- /.modal-content --> 
-      </div>
-          <!-- /.modal-dialog --> 
-        </div>
-        
-        
-        
-        <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
-          <div class="modal-dialog">
-        <div class="modal-content">
-              <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
-            <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
-          </div>
-              <div class="modal-body">
-          
-          <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
-          
-          </div>
-            <div class="modal-footer ">
-            <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
-          </div>
-            </div>
-        <!-- /.modal-content --> 
-        
-      </div>
-          <!-- /.modal-dialog --> 
-          
-        </section> 
-        
-        </div>
-  
-</main>End #main
+
+  </main><!-- End #main -->
+
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">

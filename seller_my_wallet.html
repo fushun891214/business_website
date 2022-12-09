@@ -219,7 +219,7 @@
       <!-- header text -->
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="user_index.html" class="nav-link px-3 link-dark">首頁</a></li>
-        <li><a href="user_profile" class="nav-link px-3 link-dark">買家主頁</a></li>
+        <li><a href="user_index.html" class="nav-link px-3 link-dark">買家主頁</a></li>
         <li><a href="user_shopping_cart1.html" class="nav-link px-3 link-dark">購物車</a></li>
       </ul>
       <!-- End header text -->
@@ -252,7 +252,7 @@
 
           <li>
             <a class="dropdown-item d-flex align-items-center" href="seller_payment_setting.html">
-              <i class="bi bi-gear "></i>
+              <i class="bi bi-gear"></i>
               <span>付款設定</span>
             </a>
           </li>
@@ -600,11 +600,22 @@
   <!-- End Sidebar-->
 
   <main id="main" class="main">    
+    <div class="pagetitle">
+      <h1>賣家主頁</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <!-- <li class="breadcrumb-item"><a href="seller_dash_index.html">賣家主頁</a></li> -->
+          <!-- <li class="breadcrumb-item">大功能項</li>
+          <li class="breadcrumb-item active">小功能項</li> -->
+        </ol>
+      </nav>
+    </div>
+    <!-- End Page Title -->
     <section class="section dashboard">
       <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg">
+        <div class="col-lg-8">
           <div class="row">
 
             <!-- Sales Card -->
@@ -645,7 +656,7 @@
 
             <!-- Revenue Card -->
             <div class="col-xxl-4 col-md-6">
-              
+              <div class="card info-card revenue-card">
 
                 <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -660,9 +671,22 @@
                   </ul>
                 </div>
 
-                
+                <div class="card-body">
+                  <h5 class="card-title">我的錢包</h5>
 
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>$3,264</h6>
+                      <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
 
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div><!-- End Revenue Card -->
 
             <!-- Top Selling -->
@@ -683,7 +707,7 @@
                 </div>
 
                 <div class="card-body pb-0">
-                  <h5 class="card-title">過去退貨/退款訂單 </h5>
+                  <h5 class="card-title">進帳明細 <span>| Today</span></h5>
 
                   <table class="table table-borderless">
                     <thead>
@@ -693,25 +717,24 @@
                         <th scope="col">定價</th>
                         <th scope="col">銷售數量</th>
                         <th scope="col">總計</th>
-                        <th scope="col">退款狀況</th>
+                        <th scope="col">付款狀況</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row "><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
                         <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
                         <td>$64</td>
                         <td class="fw-bold">124</td>
                         <td>$5,828</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/Returned.svg" alt="" class="d-flex justify-content-center"></a></th>
+                        <td>$5,828</td>
                       </tr>
                       <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt="" ></a></th>
+                        <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt=""></a></th>
                         <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
                         <td>$46</td>
                         <td class="fw-bold">98</td>
                         <td>$4,508</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/Returned.svg" alt="" class="d-flex justify-content-center"></a></th>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
@@ -719,7 +742,6 @@
                         <td>$59</td>
                         <td class="fw-bold">74</td>
                         <td>$4,366</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/Returned.svg" alt="" class="d-flex justify-content-center"></a></th>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
@@ -727,7 +749,6 @@
                         <td>$32</td>
                         <td class="fw-bold">63</td>
                         <td>$2,016</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/Returned.svg" alt="" class="d-flex justify-content-center"></a></th>
                       </tr>
                       <tr>
                         <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
@@ -735,9 +756,7 @@
                         <td>$79</td>
                         <td class="fw-bold">41</td>
                         <td>$3,239</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/Returned.svg" alt="" class="d-flex justify-content-center"></a></th>
                       </tr>
-
                       
                     </tbody>
                   </table>
@@ -747,87 +766,7 @@
               </div>
             </div><!-- End Top Selling -->
 
-            <!-- Top Selling -->
-            <div class="col-12">
-              <div class="card top-selling overflow-auto">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-
-                    <li><a class="dropdown-item" href="#">Today</a></li>
-                    <li><a class="dropdown-item" href="#">This Month</a></li>
-                    <li><a class="dropdown-item" href="#">This Year</a></li>
-                  </ul>
-                </div>
-
-                <div class="card-body pb-0">
-                  <h5 class="card-title">待退貨/退款訂單 </h5>
-
-                  <table class="table table-borderless">
-                    <thead>
-                      <tr>
-                        <th scope="col">商品圖樣</th>
-                        <th scope="col">商品名稱</th>
-                        <th scope="col">定價</th>
-                        <th scope="col">銷售數量</th>
-                        <th scope="col">總計</th>
-                        <th scope="col">退款狀況</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row "><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                        <td>$64</td>
-                        <td class="fw-bold">124</td>
-                        <td>$5,828</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/pending refund.svg" alt="" class="d-flex justify-content-center"></a></th>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt="" ></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-                        <td>$46</td>
-                        <td class="fw-bold">98</td>
-                        <td>$4,508</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/pending refund.svg" alt="" class="d-flex justify-content-center"></a></th>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                        <td>$59</td>
-                        <td class="fw-bold">74</td>
-                        <td>$4,366</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/pending refund.svg" alt="" class="d-flex justify-content-center"></a></th>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                        <td>$32</td>
-                        <td class="fw-bold">63</td>
-                        <td>$2,016</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/pending refund.svg" alt="" class="d-flex justify-content-center"></a></th>
-                      </tr>
-                      <tr>
-                        <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
-                        <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-                        <td>$79</td>
-                        <td class="fw-bold">41</td>
-                        <td>$3,239</td>
-                        <th class="align-middle text-center" scope="row"><a href="#"><img src="assets/img/pending refund.svg" alt="" class="d-flex justify-content-center"></a></th>
-                      </tr>
-
-                      
-                    </tbody>
-                  </table>
-
-                </div>
-
-              </div>
-            </div><!-- End Top Selling -->
+            
 
           </div>
         </div><!-- End Left side columns -->

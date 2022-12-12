@@ -8,13 +8,14 @@
   $studentId = $_POST["studentId"];
   $userpassword = $_POST["userpassword"];
   $email = $_POST["email"];
-  $address = $_POST["address"];  
+  $address = $_POST["address"];
+  $studentCard = $POST["studentCard"];  
   
   //建立資料連接
   $link = create_connection();
 			
   //檢查帳號是否有人申請
-  $sql = "SELECT * FROM user_table Where username = '$username'";
+  $sql = "SELECT * FROM user_table Where studentId = '$studentId'";
   $result = execute_sql($link, "business_website", $sql);
 
   //如果帳號已經有人使用
@@ -38,8 +39,8 @@
 		
     //執行 SQL 命令，新增此帳號
     $sql = "INSERT INTO user_table (firstName, lastName, age, studentId, 
-            userpassword, email, address) VALUES ('$firstName', '$lastName', 
-            '$age', '$studentId', '$userpassword', '$email', '$address')";
+            userpassword, email, address, studentCard) VALUES ('$firstName', '$lastName', 
+            '$age', '$studentId', '$userpassword', '$email', '$address','$studentCard')";
 
     $result = execute_sql($link, "business_website", $sql);
   }

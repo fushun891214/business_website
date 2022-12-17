@@ -358,7 +358,7 @@
             <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
               <!-- Profile Edit Form -->
-              <form>
+              <form action="assets\php\addmember_information.php" method="post" name="myForm"> <!--PHP的表單連結，method為post-->
                 <div class="row mb-3" >
                   <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                   <div class="col-md-8 col-lg-9">
@@ -379,30 +379,30 @@
                 </div>
 
                 <div class="row mb-3">
-                  <label for="about" class="col-md-4 col-lg-3 col-form-label">個人簡介</label>
+                  <label for="personal_introduce" class="col-md-4 col-lg-3 col-form-label">個人簡介</label>
                   <div class="col-md-8 col-lg-9">
-                    <textarea name="about" class="form-control" id="about" style="height: 100px">大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。</textarea>
+                    <input name="personal_introduce" class="form-control" id="personal_introduce" style="height: 100px" value="大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。">
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <label for="company" class="col-md-4 col-lg-3 col-form-label">系所</label>
+                  <label for="department" class="col-md-4 col-lg-3 col-form-label">系所</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="company" type="text" class="form-control" id="company" value="資訊管理學系四年級">
+                    <input name="department" type="text" class="form-control" id="department" value="資訊管理學系四年級">
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <label for="Phone" class="col-md-4 col-lg-3 col-form-label">電話</label>
+                  <label for="phone_number" class="col-md-4 col-lg-3 col-form-label">電話</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="phone" type="text" class="form-control" id="Phone" value="0922503413">
+                    <input name="phone_number" type="text" class="form-control" id="phone_number" value="0922503413">
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <label for="Email" class="col-md-4 col-lg-3 col-form-label">電子郵件</label>
+                  <label for="email" class="col-md-4 col-lg-3 col-form-label">電子郵件</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="email" type="email" class="form-control" id="Email" value="08156311@scu.edu.com">
+                    <input name="email" type="email" class="form-control" id="email" value="08156311@scu.edu.com">
                   </div>
                 </div>
 

@@ -17,7 +17,7 @@
   $sql = "INSERT INTO user_table (productName, productIntroduction, productPrice, productSize, 
           productPhoto, productDate, productInformation) VALUES ('$productName', '$productIntroduction', 
           '$productName', '$productSize', '$productPhoto', '$productDate', '$productInformation')";
-  $result = execute_sql($link, "business_website", $sql);
+  $result = execute_sql($link, "Business_Website", $sql);
     //釋放 $result 佔用的記憶體
   mysqli_free_result($result);
   //關閉資料連接	

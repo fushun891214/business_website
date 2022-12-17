@@ -6,7 +6,7 @@
       表示尚未登入網站，將使用者導向首頁 user_index.html	*/
   if ($passed != "TRUE")
   {
-    header("location:../../user_index.html");
+    header("location:../../user_login_index.html");
     exit();
   }
   else{

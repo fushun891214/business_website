@@ -3,7 +3,7 @@
 $server = "localhost";
 $dbuser = "superu";
 $dbpassword = "class100";
-$dbname = "business_website";
+$dbname = "Business_Website";
 
 $connection = new mysqli($server, $dbuser, $dbpassword, $dbname);
 
@@ -30,7 +30,7 @@ $sqlQuery = "CREATE TABLE product_table (
 // 	address VARCHAR(50))";
 
 if($connection->query($sqlQuery) === TRUE){
-        echo "成功建立資料表。";
+        echo "成功建立產品資料表。";
 } else {
         echo "執行失敗:" . $connection->error;
 }

@@ -12,11 +12,12 @@ if($connection->connect_error){
 }
 
 $sqlQuery = "CREATE TABLE product_table (
-    productID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    productID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 	productName VARCHAR(50),
 	productIntroduction VARCHAR(50),
 	productPrice INT,
 	productSize VARCHAR(50),
+	productPhoto LONGBLOB,
 	productDate DATE,
 	productInformation VARCHAR(50))";
 

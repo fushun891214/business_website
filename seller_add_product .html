@@ -450,7 +450,7 @@
             <div class="card-body">
               <nav class="navbar"></nav>
               <!-- General Form Elements -->
-              <form>
+              <form action="assets/php/addproduct.php" method="post" name="myForm"> <!--PHP的表單連結，method為post-->
                 <div class="row mb-3">
                   <label for="inputText" class="col-sm-2 col-form-label">商品名稱：</label>
                   <div class="col-sm-10">
@@ -493,7 +493,7 @@
                     <textarea class="form-control" style="height: 100px"  name="productInformation" placeholder="請輸入商品詳細資訊" required = "required"></textarea>
                   </div>
                 </div>
-                <div class="row mb-3">
+                <!-- <div class="row mb-3">
                   <label class="col-sm-2 col-form-label">分類選擇：</label>
                   <div class="col-sm-10">
                     <select class="form-select" multiple aria-label="multiple select example">
@@ -504,7 +504,7 @@
                       <option value="4">其他</option>
                     </select>
                   </div>
-                </div>
+                </div> -->
                 <div class="row mb-3">
                   
                   <div class="col-sm-10">

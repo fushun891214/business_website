@@ -2,7 +2,7 @@
   require_once("dbtools.inc.php");
   
   //取得表單資料
-  $fullname = $_POST["fullname"];
+  $fullName = $_POST["fullName"];
   $personal_introduce = $_POST["personal_introduce"];
   $department = $_POST["department"];
   $phone_number = $_POST["phone_number"];
@@ -12,8 +12,8 @@
   $link = create_connection();
 		
   //執行 SQL 命令，新增此帳號
-  $sql = "INSERT INTO user_information_table (fullname, personal_introduce, department, phone_number, 
-            email) VALUES ('$fullname', '$personal_introduce', '$department', '$phone_number', '$email')";
+  $sql = "INSERT INTO user_information_table (fullName, personal_introduce, department, phone_number, 
+            email) VALUES ('$fullName', '$personal_introduce', '$department', '$phone_number', '$email')";
   $result = execute_sql($link, "Business_Website", $sql);
     //釋放 $result 佔用的記憶體
   mysqli_free_result($result);

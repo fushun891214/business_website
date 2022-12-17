@@ -12,7 +12,7 @@ if($connection->connect_error){
 }
 
 $sqlQuery = "CREATE TABLE user_information_table (
-        fullname VARCHAR(50),
+        fullName VARCHAR(50),
 	personal_introduce VARCHAR(50),
 	department VARCHAR(50),
 	phone_number VARCHAR(50) PRIMARY KEY,

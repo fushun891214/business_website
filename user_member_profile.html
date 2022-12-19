@@ -379,9 +379,11 @@
                         <img id="blah" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png" alt="your image" style="display: none;">
                       </form> -->
 
+                      
+
                       <form id="form1" runat="server">
                         <input type="button" id="remove" value="remove" class="hide" control-id="ControlID-2" style="display: none;">
-                        <input type="file" name="user_img" id="imgInp" control-id="ControlID-1"><br>
+                        <input type="file" id="imgInp" control-id="ControlID-1"><br>
                         <img id="blah" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png" alt="your image" style="display: none;">
                       </form>
 
@@ -400,43 +402,6 @@
                       </a>
                     </div> -->
 
-                    <script type="text/javascript">
-                      $('#blah').hide();
-                      $('#remove').hide();
-                  
-                      function readURL(input) {
-                        if (input.files && input.files[0]) {
-                          var reader = new FileReader();
-                      
-                          reader.onload = function(e) {
-                            $('#blah').attr('src', e.target.result);
-                          }
-                      
-                          reader.readAsDataURL(input.files[0]);
-                        }
-                      }
-                  
-                      $("#imgInp").change(function() {
-                        if ($('#imgInp').val() != "") {
-                      
-                          $('#remove').show();
-                          $('#blah').show('slow');
-                        } else {
-                          $('#remove').hide();
-                          $('#blah').hide('slow');
-                        }
-                        readURL(this);
-                      });
-                      
-                      
-                      $('#remove').click(function() {
-                        $('#imgInp').val('');
-                        $(this).hide();
-                        $('#blah').hide('slow');
-                        $('#blah').attr('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png');
-                      });
-                  
-                    </script>
 
                     <!-- <div class="pt-2"> 
                       <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image">
@@ -451,6 +416,44 @@
                     </div> -->
                   </div>
                 </div>
+
+                <script type="text/javascript">
+                  $('#blah').hide();
+                  $('#remove').hide();
+              
+                  function readURL(input) {
+                    if (input.files && input.files[0]) {
+                      var reader = new FileReader();
+                  
+                      reader.onload = function(e) {
+                        $('#blah').attr('src', e.target.result);
+                      }
+                  
+                      reader.readAsDataURL(input.files[0]);
+                    }
+                  }
+              
+                  $("#imgInp").change(function() {
+                    if ($('#imgInp').val() != "") {
+                  
+                      $('#remove').show();
+                      $('#blah').show('slow');
+                    } else {
+                      $('#remove').hide();
+                      $('#blah').hide('slow');
+                    }
+                    readURL(this);
+                  });
+                  
+                  
+                  $('#remove').click(function() {
+                    $('#imgInp').val('');
+                    $(this).hide();
+                    $('#blah').hide('slow');
+                    $('#blah').attr('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png');
+                  });
+              
+                </script>
 
                 <div class="row mb-3">
                   <label for="fullName" class="col-md-4 col-lg-3 col-form-label">名字</label>

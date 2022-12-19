@@ -100,7 +100,7 @@
           </li>
 
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="seller_help.html">
+            <a class="dropdown-item d-flex align-items-center" href="seller_help.php">
               <i class="bi bi-question-circle"></i>
               <span>幫助</span>
             </a>
@@ -218,7 +218,7 @@
             </a>
           </li>
           <li>
-            <a href="seller_help.html">
+            <a href="seller_help.php">
               <i class="bi bi-circle"></i><span>幫助</span>
             </a>
           </li>
@@ -263,20 +263,23 @@
       </nav>
     </div>
     <!-- End Page Title -->
+    <div class = "container">
     <div class="card">
-      <?php
+    <div class="card-body">
+       <?php
         require_once('assets/php/dbtools.inc.php');
         $link = create_connection();
         $sqlQuery = "SELECT Question,Answer FROM QA_table";
-        $result = mysqli_query($link, "Business_Website", $sqlQuery);
-
+        $result = execute_sql($link, "business_website", $sqlQuery);
+      
         if ($link->mysqli_connect_error) {
           die("Connection failed: " . mysqli_connect_error());
         }
-
         if(mysqli_num_rows($result) > 0){
-          while($row = mysqli_fetch_assoc($result)){
-            echo("%s\n%s",$row['Question'],$row['Answer']);
+          while($row = $result->fetch_row()){
+            echo "<br>$row[0]<br>";
+            echo "<br>$row[1]<br>";
+            
           }
           $result->close();
         }
@@ -284,6 +287,10 @@
         $connection->close($link);
       ?>
     </div>
+     
+    </div>
+    </div>
+    
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

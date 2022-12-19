@@ -2,7 +2,7 @@
   require_once("dbtools.inc.php");
   
   //取得表單資料
-  $user_img = $_POST["user_img"];
+  $user_img = $_POST["imgInp"];
   $fullName = $_POST["fullName"];
   $personal_introduce = $_POST["personal_introduce"];
   $department = $_POST["department"];

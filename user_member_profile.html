@@ -369,7 +369,7 @@
               <!-- Profile Edit Form -->
               <form action="assets\php\addmember_information.php" method="post" name="myForm"> <!--PHP的表單連結，method為post-->
                 <div class="row mb-3" >
-                  <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
+                  <label for="imgInp" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                   <div class="col-md-8 col-lg-9">
                     <!-- 這邊換照片 -->
 
@@ -381,11 +381,11 @@
 
                       
 
-                      <form id="form1" runat="server">
+                      <!-- <form id="form1" runat="server"> -->
                         <input type="button" id="remove" value="remove" class="hide" control-id="ControlID-2" style="display: none;">
-                        <input type="file" id="imgInp" control-id="ControlID-1"><br>
+                        <input type="file" id="imgInp" control-id="ControlID-1" required = "required"><br>
                         <img id="blah" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png" alt="your image" style="display: none;">
-                      </form>
+                      <!-- </form> -->
 
 
                       <!-- <img src="assets/img/user.svg" alt="Profile">
@@ -417,76 +417,38 @@
                   </div>
                 </div>
 
-                <script type="text/javascript">
-                  $('#blah').hide();
-                  $('#remove').hide();
-              
-                  function readURL(input) {
-                    if (input.files && input.files[0]) {
-                      var reader = new FileReader();
-                  
-                      reader.onload = function(e) {
-                        $('#blah').attr('src', e.target.result);
-                      }
-                  
-                      reader.readAsDataURL(input.files[0]);
-                    }
-                  }
-              
-                  $("#imgInp").change(function() {
-                    if ($('#imgInp').val() != "") {
-                  
-                      $('#remove').show();
-                      $('#blah').show('slow');
-                    } else {
-                      $('#remove').hide();
-                      $('#blah').hide('slow');
-                    }
-                    readURL(this);
-                  });
-                  
-                  
-                  $('#remove').click(function() {
-                    $('#imgInp').val('');
-                    $(this).hide();
-                    $('#blah').hide('slow');
-                    $('#blah').attr('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png');
-                  });
-              
-                </script>
-
                 <div class="row mb-3">
                   <label for="fullName" class="col-md-4 col-lg-3 col-form-label">名字</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="fullName" type="text" class="form-control" id="fullName" value="蔡佳順">
+                    <input name="fullName" type="text" class="form-control" id="fullName" value="蔡佳順" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="personal_introduce" class="col-md-4 col-lg-3 col-form-label">個人簡介</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="personal_introduce" class="form-control" id="personal_introduce" style="height: 100px" value="大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。">
+                    <input name="personal_introduce" class="form-control" id="personal_introduce" style="height: 100px" value="大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="department" class="col-md-4 col-lg-3 col-form-label">系所</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="department" type="text" class="form-control" id="department" value="資訊管理學系四年級">
+                    <input name="department" type="text" class="form-control" id="department" value="資訊管理學系四年級" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="phone_number" class="col-md-4 col-lg-3 col-form-label">電話</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="phone_number" type="text" class="form-control" id="phone_number" value="0922503413">
+                    <input name="phone_number" type="text" class="form-control" id="phone_number" value="0922503413" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="email" class="col-md-4 col-lg-3 col-form-label">電子郵件</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="email" type="email" class="form-control" id="email" value="08156311@scu.edu.com">
+                    <input name="email" type="email" class="form-control" id="email" value="08156311@scu.edu.com" required = "required">
                   </div>
                 </div>
 
@@ -627,6 +589,44 @@
   <script src="assets/js/main.js"></script>
 
   <script src="assets/js/sidebars.js"></script>
+
+  <script type="text/javascript">
+    $('#blah').hide();
+    $('#remove').hide();
+
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+    
+        reader.onload = function(e) {
+          $('#blah').attr('src', e.target.result);
+        }
+    
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#imgInp").change(function() {
+      if ($('#imgInp').val() != "") {
+    
+        $('#remove').show();
+        $('#blah').show('slow');
+      } else {
+        $('#remove').hide();
+        $('#blah').hide('slow');
+      }
+      readURL(this);
+    });
+    
+    
+    $('#remove').click(function() {
+      $('#imgInp').val('');
+      $(this).hide();
+      $('#blah').hide('slow');
+      $('#blah').attr('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png');
+    });
+
+  </script>
 
 </body>
 

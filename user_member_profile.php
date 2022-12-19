@@ -258,111 +258,138 @@
 
     <section class="dashboard">
 
-      <div class="row">
+        <div class="row">
 
-      <!-- Revenue Card -->
-      <div class="col-xxl-4 col-md-4">
-        <div class="card info-card revenue-card">
+          <!-- <a href="assets/php/selectl_user_information.php"> -->
 
-          <div class="filter">
-            <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-              <li class="dropdown-header text-start">
-                <h6>Filter</h6>
-              </li>
-
-              <li><a class="dropdown-item" href="#">Today</a></li>
-              <li><a class="dropdown-item" href="#">This Month</a></li>
-              <li><a class="dropdown-item" href="#">This Year</a></li>
-            </ul>
-          </div>
-
-          <div class="card-body">
-            <h5 class="card-title">我的帳號</h5>
-
-            <div class="d-flex align-items-center">
-              <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                <img src="assets/img/user.svg" class="card-icon rounded-circle d-flex align-items-center justify-content-center" alt="">
-                <!-- <i class="bi bi-currency-dollar"></i> -->
+          <!-- Revenue Card -->
+          <div class="col-xxl-4 col-md-4">
+            <div class="card info-card revenue-card">
+    
+              <div class="filter">
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Filter</h6>
+                  </li>
+    
+                  <li><a class="dropdown-item" href="#">Today</a></li>
+                  <li><a class="dropdown-item" href="#">This Month</a></li>
+                  <li><a class="dropdown-item" href="#">This Year</a></li>
+                </ul>
               </div>
-              <div class="ps-3">
-                <h6>蔡佳順</h6>
-                <p>資訊管理學系四年級</p>
-                <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
 
+              <div class="card-body">
+    
+                <h5 class="card-title">我的帳號</h5>
+    
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <img src="" class="card-icon rounded-circle d-flex align-items-center justify-content-center" alt="">
+                    <!-- <i class="bi bi-currency-dollar"></i> -->
+                  </div>
+                  <div class="ps-3">
+                        <h6> 
+                          <?php
+
+                            require_once('assets/php/dbtools.inc.php');
+
+                            $link = create_connection();
+
+                            $sql = "SELECT fullName FROM user_information_table";
+                            $result = execute_sql($link,"Business_Website",$sql);
+
+                            if ($link->mysqli_connect_error) {
+                              die("Connection failed: " . mysqli_connect_error());
+                            }
+                            if(mysqli_num_rows($result) > 0){
+                                    while($row = $result->fetch_row()){
+                                    echo "<br>$row[0]<br>";
+                                    }
+                                    $result->close();
+                            }
+          
+                            // $connection->close($link);
+
+                          ?>
+                        </h6>
+                    <p>資訊管理學系四年級</p>
+                    <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
+    
+                  </div>
+                </div>
               </div>
+    
             </div>
-          </div>
-
-        </div>
-      </div><!-- End Revenue Card -->
-
-      <div class="card col-xxl-8 col-md-8">
-        <div class="card-body pt-3">
-          <!-- Bordered Tabs -->
-          <ul class="nav nav-tabs nav-tabs-bordered">
-
-            <li class="nav-item">
-              <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">個人資料</button>
-            </li>
-
-            <li class="nav-item">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">修改個人資料</button>
-            </li>
-
-            <li class="nav-item">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">設定</button>
-            </li>
-
-            <!-- <li class="nav-item">
-              <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
-            </li> -->
-
-          </ul>
-          <div class="tab-content pt-2">
-
-            <div class="tab-pane fade show active profile-overview" id="profile-overview">
-              <h5 class="card-title">個人簡介</h5>
-              <p class="small fst-italic">大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。</p>
-
-              <h5 class="card-title">個人資訊</h5>
-
-              <div class="row">
-                <div class="col-lg-3 col-md-4 label ">名字</div>
-                <div class="col-lg-9 col-md-8">蔡佳順</div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-3 col-md-4 label">系所</div>
-                <div class="col-lg-9 col-md-8">資訊管理學系四年級</div>
-              </div>
-
-              <!-- <div class="row">
-                <div class="col-lg-3 col-md-4 label">Job</div>
-                <div class="col-lg-9 col-md-8">Web Designer</div>
-              </div> -->
-
-              <!-- <div class="row">
-                <div class="col-lg-3 col-md-4 label">Country</div>
-                <div class="col-lg-9 col-md-8">USA</div>
-              </div> -->
-
-              <!-- <div class="row">
-                <div class="col-lg-3 col-md-4 label">Address</div>
-                <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
-              </div> -->rm
-
-              <div class="row">
-                <div class="col-lg-3 col-md-4 label">電話</div>
-                <div class="col-lg-9 col-md-8">0922503413</div>
-              </div>
-
-              <div class="row">
-                <div class="col-lg-3 col-md-4 label">電子郵件</div>
-                <div class="col-lg-9 col-md-8">08156311@scu.edu.com</div>
-              </div>
-
-            </div>
+          </div><!-- End Revenue Card -->
+    
+          <div class="card col-xxl-8 col-md-8">
+            <div class="card-body pt-3">
+              <!-- Bordered Tabs -->
+              <ul class="nav nav-tabs nav-tabs-bordered">
+    
+                <li class="nav-item">
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">個人資料</button>
+                </li>
+    
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">修改個人資料</button>
+                </li>
+    
+                <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">設定</button>
+                </li>
+    
+                <!-- <li class="nav-item">
+                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
+                </li> -->
+    
+              </ul>
+              <div class="tab-content pt-2">
+    
+                <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                  <h5 class="card-title">個人簡介</h5>
+                  <p class="small fst-italic">大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。</p>
+    
+                  <h5 class="card-title">個人資訊</h5>
+    
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label ">名字</div>
+                    <div class="col-lg-9 col-md-8">蔡佳順</div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">系所</div>
+                    <div class="col-lg-9 col-md-8">資訊管理學系四年級</div>
+                  </div>
+    
+                  <!-- <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Job</div>
+                    <div class="col-lg-9 col-md-8">Web Designer</div>
+                  </div> -->
+    
+                  <!-- <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Country</div>
+                    <div class="col-lg-9 col-md-8">USA</div>
+                  </div> -->
+    
+                  <!-- <div class="row">
+                    <div class="col-lg-3 col-md-4 label">Address</div>
+                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                  </div> -->
+    
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">電話</div>
+                    <div class="col-lg-9 col-md-8">0922503413</div>
+                  </div>
+    
+                  <div class="row">
+                    <div class="col-lg-3 col-md-4 label">電子郵件</div>
+                    <div class="col-lg-9 col-md-8">08156311@scu.edu.com</div>
+                  </div>
+    
+                </div>
+          
 
             <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
@@ -470,7 +497,7 @@
                   <label for="fullName" class="col-md-4 col-lg-3 col-form-label">賣場修改</label>
                   <div class="col-md-8 col-lg-9">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="changesMade" checked>
+                      <input class="form-check-input" type="checkbox" id="changesMade"  checked>
                       <label class="form-check-label" for="changesMade">
                         可接受信用卡付款
                       </label>

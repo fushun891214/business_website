@@ -11,7 +11,7 @@
 		
   //執行 SQL 命令，新增此帳號
   $sql = "INSERT INTO QA_table (Question,Answer) VALUES ('$Question','$Answer')";
-  $result = execute_sql($link, "business_website", $sql);
+  $result = execute_sql($link, "Business_Website", $sql);
     //釋放 $result 佔用的記憶體
   mysqli_free_result($result);
   //關閉資料連接	

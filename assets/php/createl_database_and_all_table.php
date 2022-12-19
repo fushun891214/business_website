@@ -6,5 +6,7 @@
 	require_once("createl_product_table.php");
 	echo '<br>';  
 	require_once("createl_user_information_table.php");
+	echo '<br>';  
+	require_once("createl_QA_table.php");
 ?>
 

@@ -35,6 +35,12 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/dash_style.css" rel="stylesheet">
 
+    <!-- jquery 用來替換圖片 -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+  
+  
+
+
   <!-- =======================================================
   * Template Name: MyPortfolio - v4.9.1
   * Template URL: https://bootstrapmade.com/myportfolio-bootstrap-portfolio-website-template/
@@ -95,6 +101,12 @@
       }
     </style>
 
+    <style>
+      .hide{
+    display:none;
+}
+    </style>
+
   <!-- Custom styles for this template -->
   <link href="assets/css/sidebars.css" rel="stylesheet">
 </head>
@@ -104,28 +116,25 @@
   <!-- ======= Navbar ======= -->
   <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
     <div class="container py-2 py-md-5">
-      <div class="row align-items-center">
+      <div class="row align-items-start">
         <div class="col-md-2">
           <ul class="custom-menu">
             <li class="active"><a href="user_index.html">首頁</a></li>
-            <li><a href="seller_index.html">賣家</a></li>
+            <li><a href="#">會員</a></li>
+            <li><a href="seller_profile.html">賣家</a></li>
             <li><a href="admin_index.html">管理員</a></li>
-            <li class="active"><a href="works.html">Works</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="assets/php/logout.php">登出</a></li>
           </ul>
         </div>
-        <div class="col-md-6 d-none d-md-block  mr-auto">
+        <div class="col-md d-none d-md-block  mr-auto">
           <div class="tweet d-flex">
-            <span class="bi bi-twitter text-white mt-2 mr-3"></span>
+            <span class=" text-white mt-2 mr-3"></span>
             <div>
-              <p><em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis explicabo inventore. <br> <a href="#">t.co/v82jsk</a></em></p>
+              <p><em>如有任何商品問題，可以撥打(02)23395393，由我們將有專人為您處理。<br> <a href="#"></a></em></p>
             </div>
           </div>
         </div>
-        <div class="col-md-4 d-none d-md-block">
-          <h3>Hire Me</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiisexplicabo inventore. <br> <a href="#">myemail@gmail.com</a></p>
-        </div>
+      
       </div>
 
     </div>
@@ -363,11 +372,83 @@
                   <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
                   <div class="col-md-8 col-lg-9">
                     <!-- 這邊換照片 -->
-                    <img src="assets/img/profile-img.jpg" alt="Profile">
-                    <div class="pt-2">
-                      <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                      <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                    </div>
+
+                      <!-- <form id="form1" runat="server">
+                        <input type="button" id="remove" value="remove" class="hide" control-id="ControlID-2" style="display: none;">
+                        <input type="file" id="imgInp" control-id="ControlID-1"><br>
+                        <img id="blah" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png" alt="your image" style="display: none;">
+                      </form> -->
+
+                      <form id="form1" runat="server">
+                        <input type="button" id="remove" value="remove" class="hide" control-id="ControlID-2" style="display: none;">
+                        <input type="file" name="user_img" id="imgInp" control-id="ControlID-1"><br>
+                        <img id="blah" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png" alt="your image" style="display: none;">
+                      </form>
+
+
+                      <!-- <img src="assets/img/user.svg" alt="Profile">
+
+                    <div class="pt-2"> 
+                      <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image">
+                        <i class="bi bi-upload">
+                          <label class="form-label text-white m-1" for="customFile1">Choose file</label>
+                          <input type="file" class="form-control d-none" id="customFile1" />
+                        </i>
+                      </a>
+                      <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image">
+                        <i class="bi bi-trash"></i>
+                      </a>
+                    </div> -->
+
+                    <script type="text/javascript">
+                      $('#blah').hide();
+                      $('#remove').hide();
+                  
+                      function readURL(input) {
+                        if (input.files && input.files[0]) {
+                          var reader = new FileReader();
+                      
+                          reader.onload = function(e) {
+                            $('#blah').attr('src', e.target.result);
+                          }
+                      
+                          reader.readAsDataURL(input.files[0]);
+                        }
+                      }
+                  
+                      $("#imgInp").change(function() {
+                        if ($('#imgInp').val() != "") {
+                      
+                          $('#remove').show();
+                          $('#blah').show('slow');
+                        } else {
+                          $('#remove').hide();
+                          $('#blah').hide('slow');
+                        }
+                        readURL(this);
+                      });
+                      
+                      
+                      $('#remove').click(function() {
+                        $('#imgInp').val('');
+                        $(this).hide();
+                        $('#blah').hide('slow');
+                        $('#blah').attr('src', 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png');
+                      });
+                  
+                    </script>
+
+                    <!-- <div class="pt-2"> 
+                      <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image">
+                        <i class="bi bi-upload">
+                          <label class="form-label text-white m-1" for="customFile1">Choose file</label>
+                          <input type="file" class="form-control d-none" id="customFile1" />
+                        </i>
+                      </a>
+                      <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image">
+                        <i class="bi bi-trash"></i>
+                      </a>
+                    </div> -->
                   </div>
                 </div>
 

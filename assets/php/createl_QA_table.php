@@ -11,16 +11,14 @@ if($connection->connect_error){
         die("連線失敗:" . $connection->connect_error);
 }
 
-$sqlQuery = "CREATE TABLE user_information_table (
-        user_img LONGBLOB,
-        fullName VARCHAR(50),
-	personal_introduce VARCHAR(50),
-	department VARCHAR(50),
-	phone_number VARCHAR(50) PRIMARY KEY,
-	email VARCHAR(50)) ";
+$sqlQuery = "CREATE TABLE QA_table (
+    QuestionID INT(11) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        Question VARCHAR(50),
+        Answer VARCHAR(100))";
+
 
 if($connection->query($sqlQuery) === TRUE){
-        echo "成功建立使用者個資資料表。";
+        echo "成功建立QA資料表。";
 } else {
         echo "執行失敗:" . $connection->error;
 }

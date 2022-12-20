@@ -19,7 +19,8 @@ $sqlQuery = "CREATE TABLE user_table (
 	userpassword VARCHAR(50),
 	email VARCHAR(50),
 	address VARCHAR(50),
-	studentCard LONGBLOB) ";
+	studentCard LONGBLOB
+	user_check VARCHAR(50)) ";
 
 if($connection->query($sqlQuery) === TRUE){
         echo "成功建立使用者資料表。";

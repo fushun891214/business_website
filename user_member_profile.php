@@ -8,7 +8,13 @@
   <title>買家會員資料</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="問題回報區"
+  agent-id="2728add8-d5c5-4b45-9e6b-9998e3893119"
+  language-code="zh-tw"
+></df-messenger>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -240,18 +246,6 @@
               <div class="card-body">
                 <h5 class="card-title">Sales <span>| Today</span></h5>
 
-                <div class="d-flex align-items-center">
-                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <i class="bi bi-cart"></i>
-                  </div>
-                  <div class="ps-3">
-                    <h6>145</h6>
-                    <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div> -->
           <!-- End Sales Card -->
@@ -289,27 +283,11 @@
                     <!-- <i class="bi bi-currency-dollar"></i> -->
                   </div>
                   <div class="ps-3">
-                        
-                          <?php
-
-                            require_once('assets/php/selectl_user_information.php');
-
-                            if(mysqli_num_rows($result) > 0){
-                              while($row = $result->fetch_row()){
-                              echo "<h6> $row[0] </h6>";
-                              echo "<p> $row[1] </p>";
-                              }
-                              $result->close();
-                          }
-          
-                            // $connection->close($link);
-
-                          ?>
-                        
-                   
-                    
-                    <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
-    
+                    <?php
+                      require_once('assets/php/selectl_user_information.php');
+                      echo "<h6> $name </h6>";
+                      echo "<p> $department </p>";
+                    ?>    
                   </div>
                 </div>
               </div>
@@ -343,61 +321,47 @@
     
                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
                   <h5 class="card-title">個人簡介</h5>
-
-
                   <?php
-
-                            require_once('assets/php/selectl_user_information.php');
-
-                            if(mysqli_num_rows($result) > 0){
-                              while($row = $result->fetch_row()){
-                              echo "<p> $row[2] </p>";
-                              }
-                              // $result->close();
-                          }
-          
-                            // $connection->close($link);
-
-                          ?>
-
-
+                      echo "<p> $introduce </p>";
+                  ?>
                   <!-- <p class="small fst-italic">大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。</p> -->
     
                   <h5 class="card-title">個人資訊</h5>
     
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label ">名字</div>
-                    <div class="col-lg-9 col-md-8">蔡佳順</div>
+                    <div class="col-lg-9 col-md-8">
+                      <?php
+                        echo "<p> $name </p>";
+                      ?>
+                    </div>
                   </div>
     
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">系所</div>
-                    <div class="col-lg-9 col-md-8">資訊管理學系四年級</div>
+                    <div class="col-lg-9 col-md-8">
+                      <?php
+                        echo "<p> $department </p>";
+                      ?>
+                    </div>
                   </div>
-    
-                  <!-- <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Job</div>
-                    <div class="col-lg-9 col-md-8">Web Designer</div>
-                  </div> -->
-    
-                  <!-- <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Country</div>
-                    <div class="col-lg-9 col-md-8">USA</div>
-                  </div> -->
-    
-                  <!-- <div class="row">
-                    <div class="col-lg-3 col-md-4 label">Address</div>
-                    <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
-                  </div> -->
     
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">電話</div>
-                    <div class="col-lg-9 col-md-8">0922503413</div>
+                    <div class="col-lg-9 col-md-8">
+                      <?php
+                        echo "<p> $phone </p>";
+                      ?>
+                    </div>
                   </div>
     
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">電子郵件</div>
-                    <div class="col-lg-9 col-md-8">08156311@scu.edu.com</div>
+                    <div class="col-lg-9 col-md-8">
+                      <?php
+                        echo "<p> $email </p>";
+                      ?>
+                    </div>
                   </div>
     
                 </div>

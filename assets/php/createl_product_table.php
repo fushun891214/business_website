@@ -19,7 +19,8 @@ $sqlQuery = "CREATE TABLE product_table (
 	productSize VARCHAR(50),
 	productPhoto LONGBLOB,
 	productDate DATE,
-	productInformation VARCHAR(50))";
+	productInformation VARCHAR(50)
+	product_check VARCHAR(50))";
 
 // $sqlQuery = "CREATE TABLE user_table (
 //     firstName VARCHAR(50),

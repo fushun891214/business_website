@@ -8,7 +8,13 @@
   <title>東吳拍賣站賣家中心</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="問題回報區"
+  agent-id="2728add8-d5c5-4b45-9e6b-9998e3893119"
+  language-code="zh-tw"
+></df-messenger>
   <!-- Favicons -->
   <link href="assets/img/brand.png" rel="icon">
   <link href="assets/img/brand.png" rel="apple-touch-icon">
@@ -70,12 +76,6 @@
       </li><!-- End Search Icon-->
 
       <li class="nav-item dropdown">
-
-        <!-- <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-          <i class="bi bi-bell"></i>
-          <span class="badge bg-primary badge-number">4</span>
-        </a> -->
-        <!-- End Notification Icon -->
 
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
           <li class="dropdown-header">
@@ -148,12 +148,6 @@
       <!-- End Notification Nav -->
 
       <li class="nav-item dropdown">
-
-        <!-- <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-          <i class="bi bi-chat-left-text"></i>
-          <span class="badge bg-success badge-number">3</span>
-        </a> -->
-        <!-- End Messages Icon -->
 
         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
           <li class="dropdown-header">
@@ -241,7 +235,7 @@
           </li>
 
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="seller_profile.html">
+            <a class="dropdown-item d-flex align-items-center" href="seller_profile.php">
               <i class="bi bi-person"></i>
               <span>我的資訊</span>
             </a>
@@ -281,40 +275,7 @@
 
         
       </li><!-- End Profile Nav -->
-      <!-- 讓富順崩潰的地方 -->
-      <!-- <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h5 class="text-white h4">Collapsed content</h5>
-            <span class="text-muted">Toggleable via the navbar brand.</span>
-          </div>
-        </div>
-        <nav class="navbar">
-          <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">                
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </nav>
-      </div> -->
-      
-      <!-- <div class="collapse" id="navbarToggleExternalContent">
-        <div class="bg-dark p-4">
-          <h5 class="text-white h4">Collapsed content</h5>
-          <span class="text-muted">Toggleable via the navbar brand.</span>
-        </div>
-      </div>
-      <nav class="navbar fixed-top navbar-light bg-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-      </nav> -->
-      
 
-      
-      
     </ul>
 
     
@@ -378,66 +339,6 @@
               <i class="bi bi-circle"></i><span>付款設定</span>
             </a>
           </li>
-          <!-- <li>
-            <a href="components-badges.html">
-              <i class="bi bi-circle"></i><span>Badges</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-breadcrumbs.html">
-              <i class="bi bi-circle"></i><span>Breadcrumbs</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-buttons.html">
-              <i class="bi bi-circle"></i><span>Buttons</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-cards.html">
-              <i class="bi bi-circle"></i><span>Cards</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-carousel.html">
-              <i class="bi bi-circle"></i><span>Carousel</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-list-group.html">
-              <i class="bi bi-circle"></i><span>List group</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-modal.html">
-              <i class="bi bi-circle"></i><span>Modal</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-tabs.html">
-              <i class="bi bi-circle"></i><span>Tabs</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-pagination.html">
-              <i class="bi bi-circle"></i><span>Pagination</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-progress.html">
-              <i class="bi bi-circle"></i><span>Progress</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-spinners.html">
-              <i class="bi bi-circle"></i><span>Spinners</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-tooltips.html">
-              <i class="bi bi-circle"></i><span>Tooltips</span>
-            </a>
-          </li> -->
         </ul>
       </li><!-- End Components Nav -->
 
@@ -456,16 +357,7 @@
               <i class="bi bi-circle"></i><span>退貨退款</span>
             </a>
           </li>
-          <!-- <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>新增商品</span>
-            </a>
-          </li> -->
-          <li>
-            <!-- <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
-            </a> -->
-          </li>
+          
         </ul>
       </li><!-- End Forms Nav -->
 
@@ -475,7 +367,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="seller_profile.html">
+            <a href="seller_profile.php">
               <i class="bi bi-circle"></i><span>賣家資訊</span>
             </a>
           </li>
@@ -503,97 +395,9 @@
               <i class="bi bi-circle"></i><span>出貨狀態</span>
             </a>
           </li>
-          <!-- <li>
-            <a href="charts-echarts.html">
-              <i class="bi bi-circle"></i><span>ECharts</span>
-            </a>
-          </li> -->
         </ul>
       </li>
       <!-- End Charts Nav -->
-
-      <li class="nav-item">
-        <!-- <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a> -->
-        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Remix Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-boxicons.html">
-              <i class="bi bi-circle"></i><span>Boxicons</span>
-            </a>
-          </li>
-        </ul>
-      </li>
-      <!-- End Icons Nav -->
-
-      <!-- <li class="nav-heading">會員中心</li> -->
-
-      <!-- <li class="nav-item">
-        <a class="nav-link " href="seller_profile.html">
-          <i class="bi bi-person"></i>
-          <span>個人資料</span>
-        </a>
-      </li> -->
-      <!-- End Profile Page Nav -->
-
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li> -->
-      <!-- End F.A.Q Page Nav -->
-
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li> -->
-      <!-- End Contact Page Nav -->
-
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="user_sign-up.html">
-          <i class="bi bi-card-list"></i>
-          <span>註冊新帳號</span>
-        </a>
-      </li> -->
-      <!-- End Register Page Nav -->
-
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>登出</span>
-        </a>
-      </li> -->
-      <!-- End Login Page Nav -->
-
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li> -->
-      <!-- End Error 404 Page Nav -->
-
-      <!-- <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
-        </a>
-      </li> -->
-      <!-- End Blank Page Nav -->
-
     </ul>
 
   </aside>
@@ -611,6 +415,9 @@
       </nav>
     </div>
     <!-- End Page Title -->
+    <?php
+      require_once('assets/php/selectl_product.php');
+    ?>
     <section class="section">
       <div class="row align-items-top">
         <!-- 第一直排 -->
@@ -618,12 +425,21 @@
           <div class="card">
             <img src="assets/img/product 1.png" class="card-img-top" alt="...">
             <div class="card-body">
-              
-              <h5 class="card-title">藍芽耳機</h5>
-              <p class="card-text">音質優良的藍芽耳機，電池續航力高，出門必備選擇。防潑水表面，下雨天也不用怕。</p>
+              <h5 class="card-title">
+                <?php
+                  if(mysqli_num_rows($result) > 0){
+                    echo $name;
+                  }
+                ?>
+              </h5>
+              <p class="card-text">
+              <?php
+                   echo $introduce;
+                ?>
+              </p>
 
-              <a href="#" class="card-link">編輯商品資訊</a>
-              <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
+              <!-- <a href="#" class="card-link">編輯商品資訊</a> -->
+              <button type="button" class="btn btn-danger rounded-pill float-end">審核未通過</button>
             </div>
           </div>
           <!-- Card with an image on top -->
@@ -789,3 +605,6 @@
 </body>
 
 </html>
+<?php
+  mysqli_close($link);
+?>

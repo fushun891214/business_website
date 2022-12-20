@@ -8,7 +8,13 @@
   <title>東吳拍賣站賣家中心</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  intent="WELCOME"
+  chat-title="問題回報區"
+  agent-id="2728add8-d5c5-4b45-9e6b-9998e3893119"
+  language-code="zh-tw"
+></df-messenger>
   <!-- Favicons -->
   <link href="assets/img/brand.png" rel="icon">
   <link href="assets/img/brand.png" rel="apple-touch-icon">
@@ -80,7 +86,7 @@
           </li>
 
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="seller_profile.html">
+            <a class="dropdown-item d-flex align-items-center" href="seller_profile.php">
               <i class="bi bi-person"></i>
               <span>我的資訊</span>
             </a>
@@ -213,7 +219,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="seller_profile.html">
+            <a href="seller_profile.php">
               <i class="bi bi-circle"></i><span>賣家資訊</span>
             </a>
           </li>
@@ -280,7 +286,6 @@
                     while($row = $result->fetch_row()){
                     echo "<br>$row[0]<br>";
                     echo "<br>$row[1]<br>";
-                    
                     }
                     $result->close();
             }

@@ -28,7 +28,7 @@
     <p align="center">
       <img src="../img/brand.png">       
     <p align="center">新增QA成功<br>
-      回到<a href="../../seller_my_product.html">我的商品</a>。
+      回到<a href="../../seller_help.php">幫助</a>。
     </p>
   </body>
 </html>

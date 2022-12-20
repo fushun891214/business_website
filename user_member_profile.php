@@ -289,31 +289,25 @@
                     <!-- <i class="bi bi-currency-dollar"></i> -->
                   </div>
                   <div class="ps-3">
-                        <h6> 
+                        
                           <?php
 
-                            require_once('assets/php/dbtools.inc.php');
+                            require_once('assets/php/selectl_user_information.php');
 
-                            $link = create_connection();
-
-                            $sql = "SELECT fullName FROM user_information_table";
-                            $result = execute_sql($link,"Business_Website",$sql);
-
-                            if ($link->mysqli_connect_error) {
-                              die("Connection failed: " . mysqli_connect_error());
-                            }
                             if(mysqli_num_rows($result) > 0){
-                                    while($row = $result->fetch_row()){
-                                    echo "<br>$row[0]<br>";
-                                    }
-                                    $result->close();
-                            }
+                              while($row = $result->fetch_row()){
+                              echo "<h6> $row[0] </h6>";
+                              echo "<p> $row[1] </p>";
+                              }
+                              $result->close();
+                          }
           
                             // $connection->close($link);
 
                           ?>
-                        </h6>
-                    <p>資訊管理學系四年級</p>
+                        
+                   
+                    
                     <!-- <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span> -->
     
                   </div>
@@ -349,7 +343,25 @@
     
                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
                   <h5 class="card-title">個人簡介</h5>
-                  <p class="small fst-italic">大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。</p>
+
+
+                  <?php
+
+                            require_once('assets/php/selectl_user_information.php');
+
+                            if(mysqli_num_rows($result) > 0){
+                              while($row = $result->fetch_row()){
+                              echo "<p> $row[2] </p>";
+                              }
+                              // $result->close();
+                          }
+          
+                            // $connection->close($link);
+
+                          ?>
+
+
+                  <!-- <p class="small fst-italic">大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。</p> -->
     
                   <h5 class="card-title">個人資訊</h5>
     

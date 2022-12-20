@@ -32,7 +32,7 @@
     <p align="center">
       <img src="../img/brand.png">       
     <p align="center">資料已更新完成。<br>
-      回到<a href="../../user_member_profile.html">我的資訊</a>。
+      回到<a href="../../user_member_profile.php">我的資訊</a>。
     </p>
   </body>
 </html>

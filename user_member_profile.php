@@ -126,9 +126,9 @@
         <div class="col-md-2">
           <ul class="custom-menu">
             <li class="active"><a href="user_index.html">首頁</a></li>
-            <li><a href="#">會員</a></li>
-            <li><a href="seller_profile.html">賣家</a></li>
-            <li><a href="admin_index.html">管理員</a></li>
+            <li><a href="user_member_profile.php">會員</a></li>
+            <li><a href="seller_profile.php">賣家</a></li>
+            <li><a href="admin_dash_index.html">管理員</a></li>
             <li><a href="assets/php/logout.php">登出</a></li>
           </ul>
         </div>
@@ -148,7 +148,7 @@
 
   <nav class="navbar navbar-light custom-navbar">
     <div class="container">
-      <a class="navbar-brand fs-2" href="#" >東吳拍賣站</a>
+      <a class="navbar-brand fs-2" href="user_index.html" >東吳拍賣站</a>
       <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
         <span></span>
       </a>
@@ -170,10 +170,10 @@
               </button>
               <div class="collapse show" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">我的資訊</a></li>
+                  <li><a href="user_member_profile.php" class="link-dark d-inline-flex text-decoration-none rounded">我的資訊</a></li>
                   <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">訂單狀況</a></li>
                   <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">商品退貨</a></li>
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">成為賣家</a></li>
+                  <li><a href="seller_profile.php" class="link-dark d-inline-flex text-decoration-none rounded">成為賣家</a></li>
                 </ul>
               </div>
             </li>
@@ -279,12 +279,21 @@
     
                 <div class="d-flex align-items-center">
                   <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                    <img src="" class="card-icon rounded-circle d-flex align-items-center justify-content-center" alt="">
+
+                  <?php
+                      require_once('assets/php/selectl_user_information.php');
+                      // header("")
+                      echo "<img src='$user_img->image' />";
+                    ?> 
+                  
+
+                    <!-- <img src="" class="card-icon rounded-circle d-flex align-items-center justify-content-center" alt=""> -->
                     <!-- <i class="bi bi-currency-dollar"></i> -->
+
+
                   </div>
                   <div class="ps-3">
                     <?php
-                      require_once('assets/php/selectl_user_information.php');
                       echo "<h6> $name </h6>";
                       echo "<p> $department </p>";
                     ?>    
@@ -308,9 +317,9 @@
                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">修改個人資料</button>
                 </li>
     
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">設定</button>
-                </li>
+                </li> -->
     
                 <!-- <li class="nav-item">
                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
@@ -386,8 +395,8 @@
 
                       <!-- <form id="form1" runat="server"> -->
                         <input type="button" id="remove" value="remove" class="hide" control-id="ControlID-2" style="display: none;">
-                        <input type="file" id="imgInp" control-id="ControlID-1" required = "required"><br>
-                        <img id="blah" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png" alt="your image" style="display: none;">
+                        <input type="file" id="imgInp" control-id="ControlID-1" accept="image/*" required = "required"><br>
+                        <img id="blah" src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/No_pub.svg/150px-No_pub.svg.png" width="100" height="100" alt="your image" style="display: none;">
                       <!-- </form> -->
 
 
@@ -423,35 +432,35 @@
                 <div class="row mb-3">
                   <label for="fullName" class="col-md-4 col-lg-3 col-form-label">名字</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="fullName" type="text" class="form-control" id="fullName" value="蔡佳順" required = "required">
+                    <input name="fullName" type="text" class="form-control" id="fullName" value="" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="personal_introduce" class="col-md-4 col-lg-3 col-form-label">個人簡介</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="personal_introduce" class="form-control" id="personal_introduce" style="height: 100px" value="大家好，我是資四C的蔡佳順，通常會在城中，可當面交貨。" required = "required">
+                    <input name="personal_introduce" class="form-control" id="personal_introduce" style="height: 100px" value="" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="department" class="col-md-4 col-lg-3 col-form-label">系所</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="department" type="text" class="form-control" id="department" value="資訊管理學系四年級" required = "required">
+                    <input name="department" type="text" class="form-control" id="department" value="" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="phone_number" class="col-md-4 col-lg-3 col-form-label">電話</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="phone_number" type="text" class="form-control" id="phone_number" value="0922503413" required = "required">
+                    <input name="phone_number" type="text" class="form-control" id="phone_number" value="" required = "required">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="email" class="col-md-4 col-lg-3 col-form-label">電子郵件</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="email" type="email" class="form-control" id="email" value="08156311@scu.edu.com" required = "required">
+                    <input name="email" type="email" class="form-control" id="email" value="" required = "required">
                   </div>
                 </div>
 
@@ -502,7 +511,8 @@
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary">Save Changes</button>
                 </div>
-              </form><!-- End settings Form -->
+              </form>
+              <!-- End settings Form -->
 
             </div>
 

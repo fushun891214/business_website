@@ -116,7 +116,7 @@
           </li>
 
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="user_index.html">
+            <a class="dropdown-item d-flex align-items-center" href="logout.php">
               <i class="bi bi-box-arrow-right"></i>
               <span>登出</span>
             </a>
@@ -155,18 +155,18 @@
         </a>
         <ul id="products-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="seller_my_product.html">
+            <a href="seller_my_product.php">
               <i class="bi bi-circle"></i><span>我的商品</span>
             </a>
           </li>
           
           <li>
-            <a href="seller_add_product .html">
+            <a href="seller_add_product.html">
               <i class="bi bi-circle"></i><span>新增商品</span>
             </a>
           </li>
           <li>
-            <a href="seller_sale_products_delete.html">
+            <a href="seller_sale_products_delete.php">
               <i class="bi bi-circle"></i><span>下架商品</span>
             </a>
           </li>
@@ -238,12 +238,12 @@
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="seller_logistics_setting.html">
+          <a href="#">
               <i class="bi bi-circle"></i><span>物流設定</span>
             </a>
           </li>
           <li>
-            <a href="seller_logistics_condition.html">
+          <a href="#">
               <i class="bi bi-circle"></i><span>出貨狀態</span>
             </a>
           </li>

@@ -17,7 +17,7 @@ $sqlQuery = "CREATE TABLE user_information_table (
 	personal_introduce VARCHAR(50),
 	department VARCHAR(50),
 	phone_number VARCHAR(50) PRIMARY KEY,
-	email VARCHAR(50)) ";
+	email VARCHAR(50))";
         
 if($connection->query($sqlQuery) === TRUE){
         echo "成功建立使用者個資資料表。";

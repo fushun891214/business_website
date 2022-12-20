@@ -19,17 +19,8 @@ $sqlQuery = "CREATE TABLE product_table (
 	productSize VARCHAR(50),
 	productPhoto LONGBLOB,
 	productDate DATE,
-	productInformation VARCHAR(50)
+	productInformation VARCHAR(50),
 	product_check VARCHAR(50))";
-
-// $sqlQuery = "CREATE TABLE user_table (
-//     firstName VARCHAR(50),
-// 	lastName VARCHAR(50),
-// 	age INT UNSIGNED,
-// 	studentId VARCHAR(50),
-// 	userpassword VARCHAR(50),
-// 	email VARCHAR(50),
-// 	address VARCHAR(50))";
 
 if($connection->query($sqlQuery) === TRUE){
         echo "成功建立產品資料表。";
@@ -40,4 +31,3 @@ if($connection->query($sqlQuery) === TRUE){
 $connection->close();
 
 ?>
-

@@ -10,6 +10,7 @@
   $email = $_POST["email"];
   $address = $_POST["address"];
   $studentCard = $POST["studentCard"];  
+  $userCheck = "審核中";
   
   //建立資料連接
   $link = create_connection();

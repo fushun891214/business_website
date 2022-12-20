@@ -3,15 +3,16 @@
 require_once("dbtools.inc.php");
 
 $link = create_connection();
-$sql = "SELECT fullName,department,phone_number,personal_introduce,email FROM user_information_table";
+$sql = "SELECT user_img,fullName,department,phone_number,personal_introduce,email FROM user_information_table";
 $result = execute_sql($link,"Business_Website",$sql);
 if(mysqli_num_rows($result) > 0){
     while($row = $result->fetch_row()){
-        $name = $row[0];
-        $department = $row[1];
-        $phone = $row[2];
-        $introduce = $row[3];
-        $email = $row[4];
+        $user_img = $row[0];
+        $name = $row[1];
+        $department = $row[2];
+        $phone = $row[3];
+        $introduce = $row[4];
+        $email = $row[5];
     }
 }
 if ($link->mysqli_connect_error) {

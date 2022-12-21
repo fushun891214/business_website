@@ -12,7 +12,7 @@
   $productCheck = "審核中";
   //建立資料連接
   $link = create_connection();
-  
+		
   //執行 SQL 命令，新增此帳號
   $sql = "INSERT INTO product_table (productName, productIntroduction, productPrice, productSize, 
           productPhoto, productDate, productInformation, product_check) VALUES ('$productName', '$productIntroduction', 
@@ -23,7 +23,7 @@
 
     //釋放 $result 佔用的記憶體
   mysqli_free_result($result);
-  //關閉資料連接 
+  //關閉資料連接	
   mysqli_close($link);
 ?>
 

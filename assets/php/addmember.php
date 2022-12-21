@@ -40,8 +40,8 @@
 		
     //執行 SQL 命令，新增此帳號
     $sql = "INSERT INTO user_table (firstName, lastName, age, studentId, 
-            userpassword, email, address, studentCard) VALUES ('$firstName', '$lastName', 
-            '$age', '$studentId', '$userpassword', '$email', '$address','$studentCard')";
+            userpassword, email, address, studentCard,user_check) VALUES ('$firstName', '$lastName', 
+            '$age', '$studentId', '$userpassword', '$email', '$address','$studentCard','$userCheck')";
 
     $result = execute_sql($link, "Business_Website", $sql);
   }

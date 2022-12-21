@@ -437,14 +437,20 @@
                    echo $introduce;
                 ?>
               </p>
-
               <!-- <a href="#" class="card-link">編輯商品資訊</a> -->
-              <button type="button" class="btn btn-danger rounded-pill float-end">審核未通過</button>
+              <p>
+              <?php
+                   echo $checkP
+                   ?>
+              </p>
+              <!-- <button type="button" class="btn btn-success rounded-pill float-end" font-size>
+                
+              </button> -->
             </div>
           </div>
           <!-- Card with an image on top -->
       
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product 3.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">全白筆記本</h5>
@@ -453,9 +459,9 @@
               <a href="#" class="card-link">編輯商品資訊</a>
               <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
             </div>
-          </div>
+          </div> -->
           <!-- End Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product 2.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">筆記型電腦</h5>
@@ -463,13 +469,13 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-danger rounded-pill float-end">審核未通過</button>
             </div>
-          </div>
+          </div> -->
           <!-- End Card with an image on top -->
         </div>
         <!-- 第二直排 -->
         <div class="col-lg-3">
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">球鞋</h5>
@@ -477,9 +483,10 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -487,9 +494,10 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -497,11 +505,12 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-success rounded-pill float-end">審核未通過</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
         </div>
         <div class="col-lg-3">
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-4.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -509,9 +518,10 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-5.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -519,9 +529,10 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-6.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -529,11 +540,12 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
         </div>
         <div class="col-lg-3">
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-7.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -541,9 +553,10 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-8.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -551,9 +564,10 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-warning rounded-pill float-end">審核中</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
           <!-- Card with an image on top -->
-          <div class="card">
+          <!-- <div class="card">
             <img src="assets/img/product-9.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">商品名稱</h5>
@@ -561,7 +575,8 @@
               <a href="#" class="card-link">編輯商品資訊</a>
                   <button type="button" class="btn btn-success rounded-pill float-end">審核通過</button>
             </div>
-          </div><!-- End Card with an image on top -->
+          </div> -->
+          <!-- End Card with an image on top -->
         </div>
       </div>
     </section>

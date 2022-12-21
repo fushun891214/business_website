@@ -1,5 +1,4 @@
 <?php
-
 $server = "localhost";
 $dbuser = "superu";
 $dbpassword = "class100";
@@ -11,10 +10,10 @@ if($connection->connect_error){
         die("連線失敗:" . $connection->connect_error);
 }
 
-$sqlQuery = "DELETE FROM product_table WHERE productID = 1";
+$sqlQuery = "UPDATE product_table SET product_check= '不通過' WHERE productID = 1";
 
 if($connection->query($sqlQuery) === TRUE){
-        echo "成功下架商品。";
+        echo "成功審核完畢，不通過。";
 } else {
         echo "執行失敗:" . $connection->error;
 }
@@ -22,5 +21,3 @@ if($connection->query($sqlQuery) === TRUE){
 $connection->close();
 
 ?>
-
-

@@ -520,10 +520,11 @@
           echo "<td>$date</td>";
           echo "<td>$checkP</td>";
         ?>
-        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
+        
+        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><a href="assets/php/deletel_product.php"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></a></p></td>
         </tr>
         
-    <tr>
+    <!-- <tr>
         <td><input type="checkbox" class="checkthis" /></td>
         <td>商品名稱</td>
 
@@ -532,8 +533,6 @@
         <td>審核通過</td>
         <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
         </tr>
-        
-        
     <tr>
         <td><input type="checkbox" class="checkthis" /></td>
         <td>商品名稱</td>
@@ -542,18 +541,8 @@
         <td>2022/12/12</td>
         <td>審核通過</td>
         <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
-        </tr>
+    </tr>
         
-        
-        
-    <tr>
-        <td><input type="checkbox" class="checkthis" /></td>
-        <td>商品名稱</td>
-
-        <td>$100</td>
-        <td>2022/12/12</td>
-        <td>審核通過</td>
-        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
         
         
     <tr>
@@ -564,7 +553,17 @@
         <td>2022/12/12</td>
         <td>審核通過</td>
         <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
-        </tr>
+        
+        
+    <tr>
+        <td><input type="checkbox" class="checkthis" /></td>
+        <td>商品名稱</td>
+
+        <td>$100</td>
+        <td>2022/12/12</td>
+        <td>審核通過</td>
+        <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"><i class="bi bi-trash"></i></span></button></p></td>
+        </tr> -->
         
         </tbody>
             

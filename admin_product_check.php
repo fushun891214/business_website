@@ -184,11 +184,12 @@
 
   <main id="main" class="main">    
     <div class="pagetitle">
-      <h1>報表分析</h1>
+      <h1>商品審核</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="seller_dash_index.html">管理員</a></li>
-          <li class="breadcrumb-item">報表分析</li>
+          <li class="breadcrumb-item">審核驗證</li>
+          <li class="breadcrumb-item active">商品審核</li>
         </ol>
       </nav>
     </div>
@@ -197,11 +198,11 @@
       <div class="row">
 
         <!-- Left side columns -->
-        <div class="col-lg-8">
+        <div class="col-lg">
           <div class="row">
-          <!-- Reports -->
-            <div class="col-12">
-              <div class="card">
+
+            <div class="col-xxl-4 col-md-6">
+              
 
                 <div class="filter">
                   <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
@@ -215,72 +216,98 @@
                     <li><a class="dropdown-item" href="#">This Year</a></li>
                   </ul>
                 </div>
+            </div><!-- End Revenue Card -->
 
-                <div class="card-body">
-                  <h5 class="card-title">使用人數 <span></span></h5>
-
-                  <!-- Line Chart -->
-                  <div id="reportsChart"></div>
-
-                  <script>
-                    document.addEventListener("DOMContentLoaded", () => {
-                      new ApexCharts(document.querySelector("#reportsChart"), {
-                        series: [{
-                          name: 'Sales',
-                          data: [31, 40, 28, 51, 42, 82, 56],
-                        }, {
-                          name: 'Revenue',
-                          data: [11, 32, 45, 32, 34, 52, 41]
-                        }, {
-                          name: 'Customers',
-                          data: [15, 11, 32, 18, 9, 24, 11]
-                        }],
-                        chart: {
-                          height: 350,
-                          type: 'area',
-                          toolbar: {
-                            show: false
-                          },
-                        },
-                        markers: {
-                          size: 4
-                        },
-                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
-                        fill: {
-                          type: "gradient",
-                          gradient: {
-                            shadeIntensity: 1,
-                            opacityFrom: 0.3,
-                            opacityTo: 0.4,
-                            stops: [0, 90, 100]
-                          }
-                        },
-                        dataLabels: {
-                          enabled: false
-                        },
-                        stroke: {
-                          curve: 'smooth',
-                          width: 2
-                        },
-                        xaxis: {
-                          type: 'datetime',
-                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-                        },
-                        tooltip: {
-                          x: {
-                            format: 'dd/MM/yy HH:mm'
-                          },
-                        }
-                      }).render();
-                    });
-                  </script>
-                  <!-- End Line Chart -->
+            <!-- Top Identity List -->
+            <div class="col-12">
+              <div class="card top-selling overflow-auto">
+                <div class="card-body pb-0">
+                  <?php
+                    require_once("assets/php/selectl_product.php");
+                  ?>
+                  <table class="table table-borderless">
+                    <thead>
+                      <tr>
+                        <th scope="col">商品照片</th>
+                        <th scope="col">商品名稱</th>
+                        <th scope="col">商品定價</th>
+                        <th scope="col">商品簡介</th>
+                        <th scope="col">審核狀態</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row "><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <td>
+                          <?php
+                            if(mysqli_num_rows($result) > 0){
+                              echo $name;
+                            }
+                          ?>
+                        </td>
+                        <td>
+                          <?php
+                            echo $price;
+                          ?>
+                        </td>
+                        <td>
+                          <?php
+                            echo $introduce;
+                          ?>
+                        </td>
+                        <th>
+                          <a href = "assets/php/updatel_product_agree.php"><button type="button" class="btn btn-success">審核通過</button></a>
+                          <a href = "assets/php/updatel_product_denied.php"><button type="button" class="btn btn-danger">審核不通過</button></a>
+                        </th>
+                      </tr>
+                      <!-- <tr>
+                        <th scope="row "><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <td><a class="text-primary fw-bold">球鞋</a></td>
+                        <td>$700</td>
+                        <td>這是一雙普通的球鞋，只使用一次，保養完善。</td>
+                        <th>
+                        <button type="button" class="btn btn-success">審核通過</button>
+                        <button type="button" class="btn btn-danger">審核不通過</button>
+                        </th>
+                      </tr> -->
+                      <!-- <tr>
+                        <th scope="row "><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <td><a class="text-primary fw-bold">球鞋</a></td>
+                        <td>$700</td>
+                        <td>這是一雙普通的球鞋，只使用一次，保養完善。</td>
+                        <th>
+                        <button type="button" class="btn btn-success">審核通過</button>
+                        <button type="button" class="btn btn-danger">審核不通過</button>
+                        </th>
+                      </tr> -->
+                      <!-- <tr>
+                        <th scope="row "><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <td><a class="text-primary fw-bold">球鞋</a></td>
+                        <td>$700</td>
+                        <td>這是一雙普通的球鞋，只使用一次，保養完善。</td>
+                        <th>
+                        <button type="button" class="btn btn-success">審核通過</button>
+                        <button type="button" class="btn btn-danger">審核不通過</button>
+                        </th>
+                      </tr> -->
+                      <!-- <tr>
+                        <th scope="row "><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
+                        <td><a class="text-primary">球鞋</a></td>
+                        <td>$700</td>
+                        <td>這是一雙普通的球鞋，只使用一次，保養完善。</td>
+                        <th>
+                        <button type="button" class="btn btn-success">審核通過</button>
+                        <button type="button" class="btn btn-danger">審核不通過</button>
+                        </th>
+                      </tr> -->
+                    </tbody>
+                  </table>
 
                 </div>
 
               </div>
-            </div>
-            <!-- End Reports -->
+            </div><!-- End Identity List -->
+
           </div>
         </div><!-- End Left side columns -->
 
@@ -288,6 +315,7 @@
 
       </div>
     </section>
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

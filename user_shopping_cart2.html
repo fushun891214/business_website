@@ -80,7 +80,7 @@
             <li class="active"><a href="user_index.html">首頁</a></li>
             <li><a href="user_member_profile.php">會員</a></li>
             <li><a href="seller_profile.php">賣家</a></li>
-            <li><a href="admin_dash_index.html">管理員</a></li>
+            <!-- <li><a href="admin_dash_index.html">管理員</a></li> -->
             <li><a href="assets/php/logout.php">登出</a></li>
           </ul>
         </div>
@@ -100,7 +100,7 @@
 
   <nav class="navbar navbar-light custom-navbar">
     <div class="container">
-      <a class="navbar-brand" href="user_index.html">MyPortfolio.</a>
+      <a class="navbar-brand" href="user_index.html">東吳拍賣站</a>
       <a href="#" class="burger" data-bs-toggle="collapse" data-bs-target="#main-navbar">
         <span></span>
       </a>
@@ -126,54 +126,47 @@
               <div class="col">
                 <div class="card mb-4">
                   <div class="card-header py-3">
-                    <h5 class="mb-0 text-font text-uppercase">運送地址</h5>
+                    <h5 class="mb-0 text-font text-uppercase">運送方式</h5>
                   </div>
                   <div class="card-body">
-                    <form>
-        
+                    <form action="assets\php\addorder.php" method="post" name="myForm"> <!--PHP的表單連結，method為post-->
                       <div class="row mb-4">
                         <div class="col">
                           <div class="form-outline">
-                            <input type="text" id="form11Example1" class="form-control" />
-                            <label class="form-label" for="form11Example1">First name</label>
-                          </div>
-                        </div>
-                        <div class="col">
-                          <div class="form-outline">
-                            <input type="text" id="form11Example2" class="form-control" />
-                            <label class="form-label" for="form11Example2">Last name</label>
+                            <input type="text" id="form11Example1" class="form-control" name = "customerName"  />
+                            <label class="form-label" for="form11Example1">姓名</label>
                           </div>
                         </div>
                       </div>
         
                       <!-- Text input -->
                       <div class="form-outline mb-4">
-                        <input type="text" id="form11Example3" class="form-control" />
-                        <label class="form-label" for="form11Example3">Company name</label>
+                        <input type="text" id="form11Example3" class="form-control" name = "customerDepartment" />
+                        <label class="form-label" for="form11Example3">系級</label>
                       </div>
         
                       <!-- Text input -->
                       <div class="form-outline mb-4">
                         <input type="text" id="form11Example4" class="form-control" />
-                        <label class="form-label" for="form11Example4">Address</label>
+                        <label class="form-label" for="form11Example4">學號</label>
                       </div>
         
                       <!-- Email input -->
                       <div class="form-outline mb-4">
                         <input type="email" id="form11Example5" class="form-control" />
-                        <label class="form-label" for="form11Example5">Email</label>
+                        <label class="form-label" for="form11Example5">電子郵件</label>
                       </div>
         
                       <!-- Number input -->
                       <div class="form-outline mb-4">
                         <input type="number" id="form11Example6" class="form-control" />
-                        <label class="form-label" for="form11Example6">Phone</label>
+                        <label class="form-label" for="form11Example6">電話號碼</label>
                       </div>
         
                       <!-- Message input -->
                       <div class="form-outline mb-4">
                         <textarea class="form-control" id="form11Example7" rows="4"></textarea>
-                        <label class="form-label" for="form11Example7">Additional information</label>
+                        <label class="form-label" for="form11Example7">寄送方式</label>
                       </div>
         
                       <!-- Checkbox -->

@@ -128,7 +128,7 @@
             <li class="active"><a href="user_index.html">首頁</a></li>
             <li><a href="user_member_profile.php">會員</a></li>
             <li><a href="seller_profile.php">賣家</a></li>
-            <li><a href="admin_dash_index.html">管理員</a></li>
+            <!-- <li><a href="admin_dash_index.html">管理員</a></li> -->
             <li><a href="assets/php/logout.php">登出</a></li>
           </ul>
         </div>

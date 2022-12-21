@@ -3,7 +3,7 @@
 require_once("dbtools.inc.php");
 
 $link = create_connection();
-$sql = "SELECT firstName,lastName,age,studentId,userpassword,email,address,studentCard,userCheck FROM user_information_table";
+$sql = "SELECT firstName,lastName,age,studentId,userpassword,email,address,studentCard,user_check FROM user_table";
 $result = execute_sql($link,"Business_Website",$sql);
 if(mysqli_num_rows($result) > 0){
     while($row = $result->fetch_row()){
